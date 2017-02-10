@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Yeoman", "Cake.Yeoman\Cake.Yeoman.csproj", "{62CD79A9-D4BC-466B-88C8-7DD970DE56AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Yeoman.Tests", "Cake.Yeoman.Tests\Cake.Yeoman.Tests.csproj", "{41B52B31-4347-4129-B823-AA688EF2FB7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62CD79A9-D4BC-466B-88C8-7DD970DE56AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CD79A9-D4BC-466B-88C8-7DD970DE56AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CD79A9-D4BC-466B-88C8-7DD970DE56AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CD79A9-D4BC-466B-88C8-7DD970DE56AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B52B31-4347-4129-B823-AA688EF2FB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B52B31-4347-4129-B823-AA688EF2FB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B52B31-4347-4129-B823-AA688EF2FB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B52B31-4347-4129-B823-AA688EF2FB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
