@@ -61,19 +61,9 @@
         [CakeMethodAlias]
         public static void RunYeomanGenerator(this ICakeContext context, string generator, YeomanRunnerSettings settings)
         {
-            if (generator == null)
+            if (context == null)
             {
-                throw new ArgumentNullException(nameof(generator));
-            }
-
-            if (string.IsNullOrWhiteSpace(generator))
-            {
-                throw new ArgumentOutOfRangeException(nameof(generator));
-            }
-
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
+                throw new ArgumentNullException(nameof(context));
             }
 
             var packer = new YeomanRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);

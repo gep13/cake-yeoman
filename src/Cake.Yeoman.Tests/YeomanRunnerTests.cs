@@ -11,8 +11,10 @@
             public void Should_Throw_If_Generator_Name_Is_Null()
             {
                 // Given
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = null;
+                var fixture = new YeomanRunnerFixture
+                {
+                    GeneratorName = null
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -25,8 +27,10 @@
             public void Should_Throw_If_Generator_Name_Is_Empty()
             {
                 // Given
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = string.Empty;
+                var fixture = new YeomanRunnerFixture
+                {
+                    GeneratorName = string.Empty
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -39,8 +43,10 @@
             public void Should_Throw_If_Generator_Name_Is_Whitespace()
             {
                 // Given
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = "   ";
+                var fixture = new YeomanRunnerFixture()
+                {
+                    GeneratorName = "   "
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -53,9 +59,11 @@
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = "Foo";
-                fixture.Settings = null;
+                var fixture = new YeomanRunnerFixture
+                {
+                    GeneratorName = "Foo",
+                    Settings = null
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -67,8 +75,10 @@
             [Fact]
             public void No_Settings_Specified_Should_Execute_Command_Without_Arguments()
             {
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = "Foo";
+                var fixture = new YeomanRunnerFixture
+                {
+                    GeneratorName = "Foo"
+                };
 
                 var result = fixture.Run();
 
@@ -78,8 +88,10 @@
             [Fact]
             public void Arguments_Should_Be_Added_If_Settings_Are_Passed()
             {
-                var fixture = new YeomanRunnerFixture();
-                fixture.GeneratorName = "Foo";
+                var fixture = new YeomanRunnerFixture()
+                {
+                    GeneratorName = "Foo"
+                };
                 fixture.Settings.Arguments.Add("Bar");
 
                 var result = fixture.Run();

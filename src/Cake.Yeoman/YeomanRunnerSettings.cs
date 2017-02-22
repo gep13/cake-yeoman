@@ -10,18 +10,12 @@
     /// </summary>
     public class YeomanRunnerSettings : ToolSettings
     {
-        private readonly List<string> arguments = new List<string>();
+        private readonly List<string> _arguments = new List<string>();
 
         /// <summary>
         /// Arguments to pass to the target script.
         /// </summary>
-        public IList<string> Arguments
-        {
-            get
-            {
-                return this.arguments;
-            }
-        }
+        public IList<string> Arguments => _arguments;
 
         /// <summary>
         /// Evaluates the settings and writes them into <paramref name="args"/>.
