@@ -54,6 +54,7 @@
             {
                 // Given
                 var fixture = new YeomanRunnerFixture();
+                fixture.GeneratorName = "Foo";
                 fixture.Settings = null;
 
                 // When
@@ -79,11 +80,11 @@
             {
                 var fixture = new YeomanRunnerFixture();
                 fixture.GeneratorName = "Foo";
-                fixture.Settings = new Yeoman.YeomanRunnerSettings().WithArguments("Bar");
+                fixture.Settings.Arguments.Add("Bar");
 
                 var result = fixture.Run();
 
-                result.Args.ShouldBe(fixture.GeneratorName);
+                result.Args.ShouldBe("Foo Bar");
             }
         }
     }

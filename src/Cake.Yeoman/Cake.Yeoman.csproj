@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Cake.Yeoman.nuspec" />
-    <Compile Include="IYeomanRunnerCommands.cs" />
-    <Compile Include="IYeomanRunnerConfiguration.cs" />
     <Compile Include="YeomanRunner.cs" />
     <Compile Include="YeomanAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

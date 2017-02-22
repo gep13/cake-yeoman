@@ -3,18 +3,14 @@
     using Core;
     using Core.IO;
     using Core.Tooling;
-    using System.Collections.Generic;
-    using System.IO;
     using System;
+    using System.Collections.Generic;
 
     /// <summary>
     /// A wrapper around the Yeoman scaffolding tool.
     /// </summary>
-    public class YeomanRunner : Tool<YeomanRunnerSettings>, IYeomanRunnerCommands, IYeomanRunnerConfiguration
+    public class YeomanRunner : Tool<YeomanRunnerSettings>
     {
-        private readonly IFileSystem fileSystem;
-        private DirectoryPath workingDirectoryPath;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="YeomanRunner" /> class.
         /// </summary>
@@ -29,52 +25,6 @@
             IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
-            if (fileSystem == null)
-            {
-                throw new ArgumentNullException(nameof(fileSystem));
-            }
-
-            this.fileSystem = fileSystem;
-        }
-
-        #region IYeomanRunnerConfiguration
-
-        /// <summary>
-        /// Sets the working directory for Yeoman.
-        /// </summary>
-        /// <param name="path">Path to use as working directory.</param>
-        /// <returns>Yeoman runner instance.</returns>
-        public IYeomanRunnerCommands WithWorkingDirectory(DirectoryPath path)
-        {
-            this.workingDirectoryPath = path;
-            return this;
-        }
-
-        #endregion
-
-        #region IYeomanRunnerCommands
-
-        /// <summary>
-        /// Runs a Yeoman generator with default settings.
-        /// </summary>
-        /// <param name="generator">Name of the generator to run.</param>
-        /// <returns>Yeoman runner instance.</returns>
-        public IYeomanRunnerCommands RunGenerator(string generator)
-        {
-            return this.RunGenerator(generator, new YeomanRunnerSettings());
-        }
-
-        /// <summary>
-        /// Runs a Yeoman generator with specified settings.
-        /// </summary>
-        /// <param name="generator">Name of the generator to run.</param>
-        /// <param name="configure">Settings for running Yeoman.</param>
-        /// <returns>Yeoman runner instance.</returns>
-        public IYeomanRunnerCommands RunGenerator(string generator, Action<YeomanRunnerSettings> configure)
-        {
-            var settings = new YeomanRunnerSettings();
-            configure?.Invoke(settings);
-            return this.RunGenerator(generator, settings);
         }
 
         /// <summary>
@@ -83,7 +33,8 @@
         /// <param name="generator">Name of the generator to run.</param>
         /// <param name="settings">Settings for running Yeoman.</param>
         /// <returns>Yeoman runner instance.</returns>
-        public IYeomanRunnerCommands RunGenerator(string generator, YeomanRunnerSettings settings)
+        //public IYeomanRunnerCommands RunGenerator(string generator, YeomanRunnerSettings settings)
+        public void RunGenerator(string generator, YeomanRunnerSettings settings)
         {
             if (generator == null)
             {
@@ -112,12 +63,7 @@
             };
 
             Run(settings, null, processSettings, process => process.GetStandardError());
-            return this;
         }
-
-        #endregion
-
-        #region Tool<YeomanRunnerSettings>
 
         /// <summary>
         /// Gets the name of the tool.
@@ -136,32 +82,6 @@
         {
             yield return "yo.cmd";
             yield return "yo";
-        }
-
-        #endregion
-
-        /// <summary>
-        /// Gets the working directory from the <see cref="YeomanRunnerSettings"/>.
-        /// Defaults to the currently set working directory.
-        /// </summary>
-        /// <param name="settings">The settings.</param>
-        /// <returns>
-        /// The working directory for the tool.
-        /// </returns>
-        protected override DirectoryPath GetWorkingDirectory(YeomanRunnerSettings settings)
-        {
-            if (this.workingDirectoryPath == null)
-            {
-                return base.GetWorkingDirectory(settings);
-            }
-
-            if (!this.fileSystem.Exist(this.workingDirectoryPath))
-            {
-                throw new DirectoryNotFoundException(
-                    $"Working directory path not found [{this.workingDirectoryPath.FullPath}]");
-            }
-
-            return this.workingDirectoryPath;
         }
     }
 }

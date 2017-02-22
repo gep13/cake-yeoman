@@ -3,26 +3,24 @@
     using Core;
     using Core.IO;
     using Core.Tooling;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Settings for <see cref="YeomanRunner"/> .
     /// </summary>
     public class YeomanRunnerSettings : ToolSettings
     {
-        /// <summary>
-        /// Argument string to pass to Yeoman.
-        /// </summary>
-        public string Arguments { get; private set; }
+        private readonly List<string> arguments = new List<string>();
 
         /// <summary>
-        /// The argument string to pass to Yeoman.
+        /// Arguments to pass to the target script.
         /// </summary>
-        /// <param name="arguments">Arguments to pass to Yeoman.</param>
-        /// <returns>Setting instance.</returns>
-        public YeomanRunnerSettings WithArguments(string arguments)
+        public IList<string> Arguments
         {
-            Arguments = arguments;
-            return this;
+            get
+            {
+                return this.arguments;
+            }
         }
 
         /// <summary>
@@ -31,9 +29,9 @@
         /// <param name="args">Argument builder to which the settings should be added.</param>
         internal void Evaluate(ProcessArgumentBuilder args)
         {
-            if (!string.IsNullOrWhiteSpace(Arguments))
+            foreach (var arg in Arguments)
             {
-                args.Append(Arguments);
+                args.Append(arg);
             }
         }
     }

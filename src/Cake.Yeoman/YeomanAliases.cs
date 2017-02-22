@@ -1,64 +1,84 @@
 ﻿namespace Cake.Yeoman
 {
-    using System;
     using Core;
     using Core.Annotations;
+    using System;
 
     /// <summary>
     /// Provides a wrapper around Yeoman functionality within a Cake build script.
     /// </summary>
-    [CakeAliasCategory("Node")]
+    [CakeAliasCategory("Yeoman")]
     public static class YeomanAliases
     {
         /// <summary>
-        /// Gets a Yeoman runner.
+        /// Runs a Yeoman generator with default settings.
         /// </summary>
-        /// <param name="context">The Cake context.</param>
-        /// <returns>Yeoman runner.</returns>
+        /// <param name="context">The context.</param>
+        /// <param name="generator">Name of the generator to run.</param>
         /// <example>
-        /// <para>Run Yeoman generator</para>
-        /// <para>Cake task:</para>
         /// <code>
         /// <![CDATA[
-        /// Task("Yeoman-RunGenerator")
-        ///     .Does(() =>
-        /// {
-        ///     Yeoman.RunGenerator("myGenerator");
-        /// });
-        /// ]]>
-        /// </code>
-        /// <para>Run Yeoman generator in specific working directory</para>
-        /// <para>Cake task:</para>
-        /// <code>
-        /// <![CDATA[
-        /// Task("Yeoman-WithWorkingDirectory")
-        ///     .Does(() =>
-        /// {
-        ///     Yeoman.WithWorkingDirectory("./working-dir").RunGenerator("myGenerator");
-        /// });
-        /// ]]>
-        /// </code>
-        /// <para>Pass parameters to generator</para>
-        /// <para>Cake task:</para>
-        /// <code>
-        /// <![CDATA[
-        /// Task("Yeoman-WithArguments")
-        ///     .Does(() =>
-        /// {
-        ///     Yeoman.RunGenerator("myGenerator", settings => settings.WithArguments("foo"));
-        /// });
+        ///     RunYeomanGenerator("myGenerator");
         /// ]]>
         /// </code>
         /// </example>
-        [CakePropertyAlias]
-        public static YeomanRunner Yeoman(this ICakeContext context)
+        [CakeMethodAlias]
+        public static void RunYeomanGenerator(this ICakeContext context, string generator)
         {
-            if (context == null)
+            context.RunYeomanGenerator(generator, new YeomanRunnerSettings());
+        }
+
+        /// <summary>
+        /// Runs a Yeoman generator with specified settings.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="generator">Name of the generator to run.</param>
+        /// <param name="settings">Settings for running Yeoman.</param>
+        /// <example>
+        /// <para>Define working directory</para>
+        /// <code>
+        /// <![CDATA[
+        ///     var settings = 
+        ///         new YeomanRunnerSettings 
+        ///         {
+        ///            WorkingDirectory = "c:\myproject"
+        ///         };
+        ///     RunYeomanGenerator("myGenerator", settings);
+        /// ]]>
+        /// </code>
+        /// <para>Pass arguments to generator</para>
+        /// <code>
+        /// <![CDATA[
+        ///     var settings = 
+        ///         new YeomanRunnerSettings 
+        ///         {
+        ///             Arguments = new List<string>("Foo")
+        ///         };
+        ///     RunYeomanGenerator("myGenerator", settings);
+        /// ]]>
+        /// </code>
+        /// </example>
+        [CakeMethodAlias]
+        public static void RunYeomanGenerator(this ICakeContext context, string generator, YeomanRunnerSettings settings)
+        {
+            if (generator == null)
             {
-                throw new ArgumentNullException(nameof(context));
+                throw new ArgumentNullException(nameof(generator));
             }
 
-            return new YeomanRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
+            if (string.IsNullOrWhiteSpace(generator))
+            {
+                throw new ArgumentOutOfRangeException(nameof(generator));
+            }
+
+            if (settings == null)
+            {
+                throw new ArgumentNullException(nameof(settings));
+            }
+
+            var packer = new YeomanRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
+            packer.RunGenerator(generator, settings);
         }
+
     }
 }
