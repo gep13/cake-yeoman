@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cake.Yeoman.nuspec" />
     <Compile Include="YeomanRunner.cs" />
     <Compile Include="YeomanAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
