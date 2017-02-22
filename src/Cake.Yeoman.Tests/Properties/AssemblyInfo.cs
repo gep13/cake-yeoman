@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Cake.Yeoman.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Yeoman Addin for Cake Build Automation System")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("BBT Software AG")]
 [assembly: AssemblyProduct("Cake.Yeoman.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © 2017 BBT Software AG, Root/Zermatt, Switzerland")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
