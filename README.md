@@ -16,7 +16,7 @@ More about Cake at http://cakebuild.net
 
 |Develop|Master|
 |:--:|:--:|
-|[![Build status](https://ci.appveyor.com/api/projects/status/xxx/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/xxx/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/master)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/1pvi5xjaeb7ex95g/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/1pvi5xjaeb7ex95g/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/master)|
 
 ## Code Coverage
 
