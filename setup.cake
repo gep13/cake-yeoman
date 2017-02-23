@@ -11,7 +11,7 @@ BuildParameters.SetParameters(
     repositoryName: "Cake.Yeoman",
     appVeyorAccountName: "cakecontrib");
 
-BuildParameters.PrintParamters(Context);
+BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(
     context: Context,
