@@ -3,7 +3,7 @@
 This Addin for the Cake Build Automation System allows you to scaffold projects using [Yeoman](http://yeoman.io/).
 More about Cake at http://cakebuild.net
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/cake-contrib/Cake.Yeoman/blob/feature/build/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://cake-contrib.mit-license.org)
 
 ## Information
 
