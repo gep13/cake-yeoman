@@ -7,7 +7,7 @@ More about Cake at http://cakebuild.net
 
 ## Information
 
-||Stable|Pre-release|
+| |Stable|Pre-release|
 |:--:|:--:|:--:|
 |GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.Yeoman.svg)](https://github.com/cake-contrib/Cake.Yeoman/releases/latest)|
 |NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.Yeoman.svg)](https://www.nuget.org/packages/Cake.Yeoman)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.Yeoman.svg)](https://www.nuget.org/packages/Cake.Yeoman)|
