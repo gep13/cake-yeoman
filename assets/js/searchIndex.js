@@ -34,29 +34,29 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"YeomanAliases",
-        content:"YeomanAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
         title:"YeomanRunnerSettings",
         content:"YeomanRunnerSettings",
         description:'',
         tags:''
     });
 
-    y({
-        url:'/Cake.Yeoman/Cake.Yeoman/api/Cake.Yeoman/YeomanAliases',
+    a({
+        id:1,
         title:"YeomanAliases",
-        description:""
+        content:"YeomanAliases",
+        description:'',
+        tags:''
     });
 
     y({
         url:'/Cake.Yeoman/Cake.Yeoman/api/Cake.Yeoman/YeomanRunnerSettings',
         title:"YeomanRunnerSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Yeoman/Cake.Yeoman/api/Cake.Yeoman/YeomanAliases',
+        title:"YeomanAliases",
         description:""
     });
 
