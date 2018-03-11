@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BBT Software AG")]
 [assembly: AssemblyProduct("Cake.Yeoman.Tests")]
-[assembly: AssemblyCopyright("Copyright © 2017 BBT Software AG, Root/Zermatt, Switzerland")]
+[assembly: AssemblyCopyright("Copyright © BBT Software AG, Root/Zermatt, Switzerland")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
