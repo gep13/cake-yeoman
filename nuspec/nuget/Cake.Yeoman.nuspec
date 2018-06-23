@@ -14,11 +14,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © BBT Software AG, Root/Zermatt, Switzerland</copyright>
     <tags>Cake Script Yeoman</tags>
-    <releaseNotes>https://github.com/cake-contrib/Cake.Yeoman/releases/tag/0.3.0</releaseNotes>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Yeoman/releases/tag/0.4.0</releaseNotes>
   </metadata>
   <files>
-    <file src="Cake.Yeoman.dll" target="lib\net46" />
-    <file src="Cake.Yeoman.pdb" target="lib\net46" />
-    <file src="Cake.Yeoman.xml" target="lib\net46" />
+    <file src="netstandard2.0\Cake.Yeoman.dll" target="lib\netstandard2.0" />
+    <file src="netstandard2.0\Cake.Yeoman.pdb" target="lib\netstandard2.0" />
+    <file src="netstandard2.0\Cake.Yeoman.xml" target="lib\netstandard2.0" />
   </files>
 </package>
