@@ -8,7 +8,7 @@
     <owners>pascalberger, bbtsoftware, cake-contrib</owners>
     <description>Yeoman Addin for Cake Build Automation System</description>
     <summary>The Yeoman Addin for Cake allows you to run Yeoman generators directly from .NET source code.</summary>
-    <licenseUrl>https://github.com/cake-contrib/Cake.Yeoman/blob/develop/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/cake-contrib/Cake.Yeoman</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
