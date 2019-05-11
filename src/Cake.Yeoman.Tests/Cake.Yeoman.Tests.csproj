@@ -10,6 +10,10 @@
     <Product>Cake.Yeoman</Product>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\Cake.Yeoman.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="0.33.0" />
     <PackageReference Include="Cake.Testing" Version="0.33.0" />

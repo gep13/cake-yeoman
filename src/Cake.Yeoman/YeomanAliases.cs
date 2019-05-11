@@ -1,8 +1,8 @@
 ﻿namespace Cake.Yeoman
 {
     using System;
-    using Core;
-    using Core.Annotations;
+    using Cake.Core;
+    using Cake.Core.Annotations;
 
     /// <summary>
     /// Provides a wrapper around Yeoman functionality within a Cake build script.
@@ -35,7 +35,7 @@
         /// <param name="generator">Name of the generator to run.</param>
         /// <param name="settings">Settings for running Yeoman.</param>
         /// <example>
-        /// <para>Define working directory</para>
+        /// <para>Define working directory:</para>
         /// <code>
         /// <![CDATA[
         ///     var settings =
@@ -46,7 +46,7 @@
         ///     RunYeomanGenerator("myGenerator", settings);
         /// ]]>
         /// </code>
-        /// <para>Pass arguments to generator</para>
+        /// <para>Pass arguments to generator:</para>
         /// <code>
         /// <![CDATA[
         ///     var settings =

@@ -1,9 +1,9 @@
 ﻿namespace Cake.Yeoman
 {
     using System.Collections.Generic;
-    using Core;
-    using Core.IO;
-    using Core.Tooling;
+    using Cake.Core;
+    using Cake.Core.IO;
+    using Cake.Core.Tooling;
 
     /// <summary>
     /// Settings for <see cref="YeomanRunner"/> .

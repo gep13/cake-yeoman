@@ -13,7 +13,7 @@
                 // Given
                 var fixture = new YeomanRunnerFixture
                 {
-                    GeneratorName = null
+                    GeneratorName = null,
                 };
 
                 // When
@@ -29,7 +29,7 @@
                 // Given
                 var fixture = new YeomanRunnerFixture
                 {
-                    GeneratorName = string.Empty
+                    GeneratorName = string.Empty,
                 };
 
                 // When
@@ -45,7 +45,7 @@
                 // Given
                 var fixture = new YeomanRunnerFixture()
                 {
-                    GeneratorName = "   "
+                    GeneratorName = "   ",
                 };
 
                 // When
@@ -62,7 +62,7 @@
                 var fixture = new YeomanRunnerFixture
                 {
                     GeneratorName = "Foo",
-                    Settings = null
+                    Settings = null,
                 };
 
                 // When
@@ -77,7 +77,7 @@
             {
                 var fixture = new YeomanRunnerFixture
                 {
-                    GeneratorName = "Foo"
+                    GeneratorName = "Foo",
                 };
 
                 var result = fixture.Run();
@@ -90,7 +90,7 @@
             {
                 var fixture = new YeomanRunnerFixture()
                 {
-                    GeneratorName = "Foo"
+                    GeneratorName = "Foo",
                 };
                 fixture.Settings.Arguments.Add("Bar");
 
