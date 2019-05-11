@@ -1,6 +1,6 @@
 ﻿namespace Cake.Yeoman.Tests
 {
-    using Testing.Fixtures;
+    using Cake.Testing.Fixtures;
 
     internal class YeomanRunnerFixture : ToolFixture<YeomanRunnerSettings>
     {

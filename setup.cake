@@ -9,7 +9,8 @@ BuildParameters.SetParameters(
     title: "Cake.Yeoman",
     repositoryOwner: "cake-contrib",
     repositoryName: "Cake.Yeoman",
-    appVeyorAccountName: "cakecontrib");
+    appVeyorAccountName: "cakecontrib",
+    shouldRunCodecov: true);
 
 BuildParameters.PrintParameters(Context);
 
@@ -20,7 +21,7 @@ ToolSettings.SetToolSettings(
         BuildParameters.RootDirectoryPath + "/src/Cake.Yeoman.Tests/*.cs",
         BuildParameters.RootDirectoryPath + "/src/Cake.Yeoman*/**/*.AssemblyInfo.cs"
     },
-    testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
+    testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* -[Shouldly]*",
     testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
     testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
 
