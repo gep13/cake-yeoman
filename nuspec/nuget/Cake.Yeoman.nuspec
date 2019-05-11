@@ -7,7 +7,7 @@
     <authors>BBT Software AG</authors>
     <owners>pascalberger, bbtsoftware, cake-contrib</owners>
     <description>Yeoman Addin for Cake Build Automation System</description>
-    <summary>The Yeoman Addin for Cake allows you to run Yeoman generators directly from .NET source code.</summary>
+    <summary>The Yeoman Addin for Cake allows you to run Yeoman generators directly from a Cake script.</summary>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/cake-contrib/Cake.Yeoman</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</iconUrl>
