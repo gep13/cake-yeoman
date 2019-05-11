@@ -2,9 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
-    using Core;
-    using Core.IO;
-    using Core.Tooling;
+    using Cake.Core;
+    using Cake.Core.IO;
+    using Cake.Core.Tooling;
 
     /// <summary>
     /// A wrapper around the Yeoman scaffolding tool.
@@ -56,8 +56,7 @@
             var processSettings = new ProcessSettings
             {
                 Arguments = args.Render(),
-
-                RedirectStandardError = true
+                RedirectStandardError = true,
             };
 
             this.Run(settings, null, processSettings, process => process.GetStandardError());
