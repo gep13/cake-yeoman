@@ -1,4 +1,4 @@
-#load nuget:https://www.myget.org/F/cake-contrib/api/v2?package=Cake.Recipe&prerelease
+#load nuget:?package=Cake.Recipe&version=1.0.0
 
 Environment.SetVariableNames();
 
@@ -9,8 +9,7 @@ BuildParameters.SetParameters(
     title: "Cake.Yeoman",
     repositoryOwner: "cake-contrib",
     repositoryName: "Cake.Yeoman",
-    appVeyorAccountName: "cakecontrib",
-    shouldRunCodecov: false);
+    appVeyorAccountName: "cakecontrib");
 
 BuildParameters.PrintParameters(Context);
 
