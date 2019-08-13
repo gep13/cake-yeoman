@@ -10,6 +10,7 @@ BuildParameters.SetParameters(
     repositoryOwner: "cake-contrib",
     repositoryName: "Cake.Yeoman",
     appVeyorAccountName: "cakecontrib",
+    shouldRunGitVersion: true,
     shouldRunCodecov: false);
 
 BuildParameters.PrintParameters(Context);
