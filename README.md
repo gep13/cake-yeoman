@@ -18,6 +18,7 @@ More about Cake at http://cakebuild.net
 |:--:|:--:|:--:|
 |AppVeyor Windows|[![Build status](https://ci.appveyor.com/api/projects/status/1pvi5xjaeb7ex95g/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/1pvi5xjaeb7ex95g/branch/master?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-yeoman/branch/master)|
 |Azure DevOps Windows|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Yeoman/_apis/build/status/cake-contrib.Cake.Yeoman?branchName=develop&jobName=Windows)](https://dev.azure.com/cake-contrib/Cake.Yeoman/_build/latest?definitionId=26&branchName=develop)|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Yeoman/_apis/build/status/cake-contrib.Cake.Yeoman?branchName=master&jobName=Windows)](https://dev.azure.com/cake-contrib/Cake.Yeoman/_build/latest?definitionId=26&branchName=master)|
+|Azure DevOps Ubuntu|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Yeoman/_apis/build/status/cake-contrib.Cake.Yeoman?branchName=develop&jobName=Ubuntu)](https://dev.azure.com/cake-contrib/Cake.Yeoman/_build/latest?definitionId=26&branchName=develop)|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Yeoman/_apis/build/status/cake-contrib.Cake.Yeoman?branchName=master&jobName=Ubuntu)](https://dev.azure.com/cake-contrib/Cake.Yeoman/_build/latest?definitionId=26&branchName=master)|
 
 ## Code Coverage
 
