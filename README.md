@@ -31,14 +31,12 @@ More about Cake at http://cakebuild.net
 
 ## Chat Room
 
-Come join in the conversation about Cake.Yeoman in our Gitter Chat Room
+Come join in the conversation about Cake.Yeoman in our Gitter Chat Room.
 
 [![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 
 ## Contributing
 
 Contributions are welcome. See [Contribution Guidelines].
 
 [Contribution Guidelines]: CONTRIBUTING.md
-
