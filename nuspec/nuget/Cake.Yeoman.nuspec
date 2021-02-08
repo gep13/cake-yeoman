@@ -15,7 +15,7 @@
     <repository type="git" url="https://github.com/cake-contrib/Cake.Yeoman.git"/>
     <copyright>Copyright © BBT Software AG, Root/Zermatt, Switzerland</copyright>
     <tags>Cake Script Yeoman</tags>
-    <releaseNotes>https://github.com/cake-contrib/Cake.Yeoman/releases/tag/0.5.0</releaseNotes>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Yeoman/releases/tag/1.0.0</releaseNotes>
   </metadata>
   <files>
     <file src="..\..\..\..\nuspec\nuget\icon.png" target="" />
