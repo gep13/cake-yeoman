@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{524D7C33
 		..\build.ps1 = ..\build.ps1
 		..\build.sh = ..\build.sh
 		..\README.md = ..\README.md
-		..\setup.cake = ..\setup.cake
+		..\recipe.cake = ..\recipe.cake
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{57E9D265-334B-4F07-BA74-D9F3341AFD70}"
